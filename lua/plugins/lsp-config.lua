@@ -11,7 +11,7 @@ return {
     { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
 
     -- Additional lua configuration, makes nvim stuff amazing!
-    'folke/neodev.nvim',
+    { 'folke/neodev.nvim', opts = {} }
   },
   config = function()
     --  Run when LSP connects to a buffer
@@ -69,12 +69,12 @@ return {
     --  If you want to override the default filetypes that your language server will attach to you can
     --  define the property 'filetypes' to the map in question.
     local servers = {
-      -- clangd = {},
+      clangd = {},
+      html = { filetypes = { 'html', 'twig', 'hbs', 'htm' } },
       -- gopls = {},
       -- pyright = {},
       -- rust_analyzer = {},
       -- tsserver = {},
-      -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
       lua_ls = {
         Lua = {
@@ -83,9 +83,6 @@ return {
         },
       },
     }
-
-    -- Setup neovim lua configuration
-    require('neodev').setup()
 
     -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
     local capabilities = vim.lsp.protocol.make_client_capabilities()
