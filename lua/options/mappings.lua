@@ -1,5 +1,5 @@
 -- Close the current buffer
-vim.api.nvim_set_keymap('n', '<C-W>d', ':bd<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>x', '<cmd>bd<CR>', { silent = true, desc="Close current buffer"})
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
@@ -16,3 +16,8 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+-- Splits
+vim.keymap.set('n', '<leader>x', '<cmd>bd<CR>', { silent = true, desc="Close current buffer"})
+vim.keymap.set('n', '<leader>s', '<cmd>split<CR>', { silent = true, desc="Split horizontally"})
+vim.keymap.set('n', '<leader>v', '<cmd>vsplit<CR>', { silent = true, desc="Split vertically"})

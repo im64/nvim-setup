@@ -81,7 +81,6 @@ return {
         "clangd",
         "clang-format",
         "codelldb",
-        "alex",
       }
     }
   }
