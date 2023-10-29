@@ -70,8 +70,8 @@ return {
     -- Install LSP for new langs here!
     local servers = {
       clangd = {},
-      html = { filetypes = { 'html', 'twig', 'hbs', 'htm' } },
-      pylsp = {},
+      -- html = { filetypes = { 'html', 'twig', 'hbs', 'htm' } },
+      pyright = {},
       -- gopls = {},
       -- rust_analyzer = {},
       -- tsserver = {},
