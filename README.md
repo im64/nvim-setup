@@ -2,8 +2,6 @@
 Based on https://github.com/nvim-lua/kickstart.nvim
 
 ### Installation
-
-Clone kickstart.nvim:
 ```sh
 # on Linux and Mac
 git clone https://github.com/im64/nvim-setup.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
